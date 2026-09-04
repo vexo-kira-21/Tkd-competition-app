@@ -2,7 +2,7 @@ name: TKD TOURNAMENT SYSTEM
 
 on:
   push:
-    branches: vexo-kira-21 
+    branches: [ main, master, vexo-kira-21 ]
   workflow_dispatch:
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
           channel: 'stable'
 
       - name: Reconstruct Project Scaffold
-       run: flutter create . --project-name=tkd_competition_app --platforms=android
+        run: flutter create . --project-name=tkd_tournament_system --platforms=android
 
       - name: Get Dependencies
         run: flutter pub get
